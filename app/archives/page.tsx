@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 
 type Post = { date: string; title: string; excerpt: string; tags: string[]; image?: boolean };
 type Month = { name: string; active: boolean; posts: Post[] };
@@ -133,7 +134,7 @@ export default function ArchivesPage() {
                             </div>
                             {post.image && (
                               <div className="w-24 h-16 rounded-lg overflow-hidden flex-shrink-0 relative">
-                                <Image src="/images/typography-layout.png" alt={post.title} fill className="object-cover" />
+                                <Image src={asset("/images/typography-layout.png")} alt={post.title} fill className="object-cover" />
                               </div>
                             )}
                           </div>
@@ -159,7 +160,7 @@ export default function ArchivesPage() {
                 <div className="space-y-3">
                   {/* Large card */}
                   <div className="relative rounded-lg overflow-hidden h-40">
-                    <Image src="/images/category-interior.png" alt="Design Theory" fill className="object-cover opacity-60" />
+                    <Image src={asset("/images/category-interior.png")} alt="Design Theory" fill className="object-cover opacity-60" />
                     <div className="absolute bottom-0 left-0 right-0 p-4 flex items-end justify-between">
                       <div>
                         <h4 className="font-serif text-xl text-[#2F3334]">Design Theory</h4>

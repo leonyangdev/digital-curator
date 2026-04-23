@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 
 const focusAreas = [
   "Editorial Design", "Digital Strategy", "Visual Identity",
@@ -25,7 +26,7 @@ export default function AboutPage() {
             <div className="w-[457px] flex-shrink-0 space-y-8">
               <div className="relative rounded-lg overflow-hidden">
                 <div className="w-full h-[572px] relative">
-                  <Image src="/images/profile-photo.png" alt="Profile photo" fill className="object-cover" />
+                  <Image src={asset("/images/profile-photo.png")} alt="Profile photo" fill className="object-cover" />
                 </div>
                 <div className="absolute inset-0 rounded-lg shadow-[inset_0_0_0_1px_rgba(175,179,179,0.15)]" />
               </div>

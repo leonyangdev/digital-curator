@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 
 export function generateStaticParams() {
   return [{ slug: "architecture-of-silence" }];
@@ -39,7 +40,7 @@ export default function PostPage() {
           {/* Featured Image */}
           <div className="mb-16">
             <div className="w-full h-[544px] relative rounded-lg shadow-lg overflow-hidden">
-              <Image src="/images/featured-architecture.png" alt="Featured Architecture" fill className="object-cover" />
+              <Image src={asset("/images/featured-architecture.png")} alt="Featured Architecture" fill className="object-cover" />
             </div>
             <p className="text-center text-xs text-[#5B6061] mt-4">
               The Kōyō House, Kyoto. Designed by Studio Ma. Photography by H. Tanaka.
@@ -90,7 +91,7 @@ export default function PostPage() {
               {/* Inline bento image */}
               <div className="bg-[#F2F4F4] rounded-lg p-6 flex gap-6">
                 <div className="w-[300px] h-[300px] rounded overflow-hidden flex-shrink-0 relative">
-                  <Image src="/images/interior-details.png" alt="Minimalist interior details" fill className="object-cover" />
+                  <Image src={asset("/images/interior-details.png")} alt="Minimalist interior details" fill className="object-cover" />
                 </div>
                 <div className="flex-1 flex flex-col justify-center space-y-4">
                   <h3 className="font-serif text-xl text-[#2F3334]">Material Honesty</h3>

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 
 const featuredPosts = [
   {
@@ -10,21 +11,21 @@ const featuredPosts = [
     readTime: "8 min read",
     title: "The Architecture of Digital Calm",
     excerpt: "Exploring how we can build interfaces that lower resting heart rates rather than demanding constant attention. A study in tonal depth and whitespace.",
-    image: "/images/desk-workspace.png",
+    image: asset("/images/desk-workspace.png"),
   },
   {
     id: 2,
     category: "LIFE",
     title: "Embracing the Slow Morning",
     excerpt: "Why resisting the urge to check notifications in the first hour of waking changes the trajectory of the entire day.",
-    image: "/images/morning-mug.png",
+    image: asset("/images/morning-mug.png"),
   },
   {
     id: 3,
     category: "CULTURE",
     title: "The Return of Physical Media",
     excerpt: "In an era of endless streaming, the tactile nature of books and vinyl offers a grounding permanence.",
-    image: "/images/open-book.png",
+    image: asset("/images/open-book.png"),
   },
 ];
 
@@ -33,19 +34,19 @@ const latestPosts = [
     date: "OCT 12, 2023",
     title: "The Lost Art of Letter Writing",
     excerpt: "Reclaiming intention through the slow, deliberate process of putting pen to paper in a digital age.",
-    image: "/images/writing-notebook.png",
+    image: asset("/images/writing-notebook.png"),
   },
   {
     date: "OCT 05, 2023",
     title: "Finding Stillness in Motion",
     excerpt: "Observations from a month spent traveling entirely by train across the coastal landscapes.",
-    image: "/images/calm-beach.png",
+    image: asset("/images/calm-beach.png"),
   },
   {
     date: "SEP 28, 2023",
     title: "Curating Your Space",
     excerpt: "How reducing physical possessions can lead to greater mental clarity and focused creativity.",
-    image: "/images/minimalist-interior.png",
+    image: asset("/images/minimalist-interior.png"),
   },
 ];
 
@@ -81,7 +82,7 @@ export default function Home() {
             </div>
           </div>
           <div className="w-[448px] h-[560px] rounded-lg overflow-hidden shadow-lg relative">
-            <Image src="/images/hero.png" alt="Abstract minimalist architecture" fill className="object-cover" />
+            <Image src={asset("/images/hero.png")} alt="Abstract minimalist architecture" fill className="object-cover" />
           </div>
         </section>
 
@@ -97,7 +98,7 @@ export default function Home() {
             <div className="grid grid-cols-3 gap-8">
               <div className="col-span-2 bg-white border border-[rgba(175,179,179,0.15)] rounded-lg overflow-hidden">
                 <div className="h-[448px] relative">
-                  <Image src="/images/desk-workspace.png" alt="Desk workspace" fill className="object-cover" />
+                  <Image src={asset("/images/desk-workspace.png")} alt="Desk workspace" fill className="object-cover" />
                 </div>
                 <div className="p-12 space-y-4">
                   <div className="flex items-center gap-3 text-sm">

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/utils";
 
 const articles = [
   {
@@ -10,7 +11,7 @@ const articles = [
     date: "October 12, 2023",
     title: "The Architecture of Silence",
     excerpt: "Exploring how physical spaces shape our internal landscapes. Why empty rooms and minimalist design aren't just aesthetic…",
-    image: "/images/article-architecture.png",
+    image: asset("/images/article-architecture.png"),
   },
   {
     slug: "disconnecting-to-reconnect",
@@ -18,7 +19,7 @@ const articles = [
     date: "September 28, 2023",
     title: "Disconnecting to Reconnect",
     excerpt: "A personal experiment in digital minimalism. Navigating a month without social media and rediscovering the nuances of analog…",
-    image: "/images/article-workspace.png",
+    image: asset("/images/article-workspace.png"),
   },
   {
     slug: "notes-from-the-coast",
@@ -26,7 +27,7 @@ const articles = [
     date: "August 15, 2023",
     title: "Notes from the Coast",
     excerpt: "Observations from two weeks spent entirely offline on the rugged northern coastline. Reflections on time, tide, and the luxury of…",
-    image: "/images/article-ocean.png",
+    image: asset("/images/article-ocean.png"),
   },
   {
     slug: "art-of-slow-mornings",
@@ -34,7 +35,7 @@ const articles = [
     date: "July 04, 2023",
     title: "The Art of Slow Mornings",
     excerpt: "Reclaiming the first hours of the day. A guide to establishing morning rituals that prioritize intention over urgency, setting a…",
-    image: "/images/article-coffee-book.png",
+    image: asset("/images/article-coffee-book.png"),
   },
 ];
 
