@@ -2,6 +2,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 
+export function generateStaticParams() {
+  return [{ slug: "architecture-of-silence" }];
+}
+
 export default function PostPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#F9F9F9]">
